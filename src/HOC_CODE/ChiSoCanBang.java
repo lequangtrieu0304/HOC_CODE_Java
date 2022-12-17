@@ -1,0 +1,26 @@
+package HOC_CODE;
+
+import java.util.Scanner;
+
+public class ChiSoCanBang {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		
+		int sum = 0;
+		for(int i=0; i<n; i++) {
+			arr[i] = sc.nextInt();
+			sum += arr[i];
+		}
+		
+		int sumLeft = 0;
+		for(int i=0; i<n; i++) {
+			sum -= arr[i];
+			if(sum == sumLeft) {
+				System.out.print(i+ " ");
+			}
+			sumLeft += arr[i];
+		}
+ 	}
+}
