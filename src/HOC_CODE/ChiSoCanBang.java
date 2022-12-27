@@ -15,12 +15,17 @@ public class ChiSoCanBang {
 		}
 		
 		int sumLeft = 0;
+		boolean ok = false;
 		for(int i=0; i<n; i++) {
 			sum -= arr[i];
 			if(sum == sumLeft) {
 				System.out.print(i+ " ");
+				ok = true;
 			}
 			sumLeft += arr[i];
+		}
+		if(!ok) {
+			System.out.println("not found");
 		}
  	}
 }
